@@ -2,16 +2,14 @@ package id.kotlin.mercari
 
 class MercariExercise {
 
-  fun fizzBuzz(target: Int) {
-    for (input in 1..target) {
-      val output = when {
-        input.mod(15) == 0 -> "FizzBuzz"
-        input.mod(3) == 0 -> "Fizz"
-        input.mod(5) == 0 -> "Buzz"
-        else -> input.toString()
+  fun fizzBuzz(n: Int) {
+    for (i in 1..n) {
+      when {
+        i.mod(15) == 0 -> println("FizzBuzz")
+        i.mod(3) == 0 -> println("Fizz")
+        i.mod(5) == 0 -> println("Buzz")
+        else -> println(i)
       }
-
-      println(output)
     }
   }
 }
